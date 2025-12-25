@@ -1,7 +1,7 @@
 
 # A simple string builder in C
 [![CI](https://github.com/prokoppd/sb.h/actions/workflows/ci.yml/badge.svg)](https://github.com/prokoppd/sb.h/actions/workflows/ci.yml)
-
+[![codecov](https://codecov.io/gh/<OWNER>/<REPO>/branch/main/graph/badge.svg)](https://codecov.io/gh/prokoppd/sb.h)
 ## How to use
 Include the header file in your C source and define `SB_IMPLEMENTATION` in **one** source file before including it.
 
