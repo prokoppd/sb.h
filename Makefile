@@ -1,6 +1,6 @@
 TARGET = sb_test
 
-CFLAGS = -std=c23 -O3 -Wall -Wextra -ggdb -fdiagnostics-color=always -fprofile-arcs -ftest-coverage 
+CFLAGS = -O3 -Wall -Wextra -ggdb -fdiagnostics-color=always -fprofile-arcs -ftest-coverage 
 # LDFLAGS = 
 BUILD_DIR = build
 SRCS = $(wildcard *.c)
