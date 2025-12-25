@@ -2,6 +2,7 @@
 #define STRINNG_BUILDER_H
 
 #include <stddef.h>
+#include <stdbool.h>
 
 #ifndef SB_INITIAL_CAPACITY
 #define SB_INITIAL_CAPACITY (32)
