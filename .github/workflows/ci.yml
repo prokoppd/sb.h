@@ -17,7 +17,7 @@ jobs:
       - name: install dependencies
         run: |
           sudo apt update -y
-          sudo apt install -y gcov gcovr
+          sudo apt install -y gcovr
       - name: Build
         run: make -j
       - name: Test
