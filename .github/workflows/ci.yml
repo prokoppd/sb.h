@@ -28,6 +28,6 @@ jobs:
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: coverage/coverage_report.xml
+          files: coverage/coverage_report.xml build/junit.xml
           flags: unittests
           fail_ci_if_error: true

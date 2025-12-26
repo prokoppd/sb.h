@@ -23,7 +23,7 @@ clean:
 	rm -rf $(BUILD_DIR) *.gcda *.gcno *.gcov coverage.info coverage
 
 test: all
-	$(BUILD_DIR)/$(TARGET)
+	$(BUILD_DIR)/$(TARGET) --output=$(BUILD_DIR)/junit.xml
 
 valgrind: all
 	valgrind --leak-check=full --track-origins=yes -s $(BUILD_DIR)/$(TARGET) 
