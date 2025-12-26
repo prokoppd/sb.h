@@ -23,10 +23,10 @@ clean:
 	rm -rf $(BUILD_DIR) *.gcda *.gcno *.gcov coverage.info coverage_report
 
 test: all
-	$(BUILD_DIR)/$(TARGET) -v | ./greenest
+	$(BUILD_DIR)/$(TARGET)
 
 valgrind: all
-	valgrind --leak-check=full --track-origins=yes -s $(BUILD_DIR)/$(TARGET) -v | ./greenest
+	valgrind --leak-check=full --track-origins=yes -s $(BUILD_DIR)/$(TARGET) 
 
 coverage_report: all
 	$(BUILD_DIR)/$(TARGET) -v
