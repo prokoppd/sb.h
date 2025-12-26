@@ -23,15 +23,11 @@ jobs:
       - name: Test
         run: make test
       - name: coverage
-        run: |
-          gcovr \
-          --root . \
-          --xml-pretty \
-          --output coverage.xml
+        run: make coverage
       - name: Upload coverage
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: coverage.xml
+          files: coverage/coverage_report.xml
           flags: unittests
           fail_ci_if_error: true

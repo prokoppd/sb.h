@@ -1,6 +1,6 @@
 .cache
 compile_commands.json
 build/
-coverage_report/
+coverage/
 *.o
 *.obj

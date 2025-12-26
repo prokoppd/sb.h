@@ -20,7 +20,7 @@ $(BUILD_DIR)/%.o: %.c
 
 .PHONY: clean test
 clean:
-	rm -rf $(BUILD_DIR) *.gcda *.gcno *.gcov coverage.info coverage_report
+	rm -rf $(BUILD_DIR) *.gcda *.gcno *.gcov coverage.info coverage
 
 test: all
 	$(BUILD_DIR)/$(TARGET)
@@ -28,7 +28,7 @@ test: all
 valgrind: all
 	valgrind --leak-check=full --track-origins=yes -s $(BUILD_DIR)/$(TARGET) 
 
-coverage_report: all
+coverage: all
 	$(BUILD_DIR)/$(TARGET) -v
-	@mkdir -p coverage_report
-	gcovr -r . --html --html-details -o coverage_report/coverage.html
+	@mkdir -p coverage
+	gcovr -r . 
